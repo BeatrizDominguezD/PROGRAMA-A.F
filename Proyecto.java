@@ -2,9 +2,9 @@ package proyecto;
 
 public class Proyecto {
 public static void main(String[] args) {
-    	int [] input = {1,0,1,0,0};
+    	int [] input = {1,1,1,1,0,0};
         String inicio = "q0";
-        String fin = "q3";
+        String fin = "q5";
         String actual = inicio;
         boolean finalizar = false;
         int contador = 0;
@@ -30,7 +30,7 @@ public static void main(String[] args) {
                          
                          if(actual=="q1"){
                               
-   		 	  	if(input[contador]==0 ){
+   		 	  	if(input[contador]==1 ){
    		 	  		actual="q2";
                                         System.out.println("cambio de q1 a q2");
    		 	  	}
@@ -48,12 +48,31 @@ public static void main(String[] args) {
    		 	  	continue;
    		 	  }
                          
-                         
                          if(actual=="q3"){
+                              
+   		 	  	if(input[contador]==1 ){
+   		 	  		actual="q4";
+                                        System.out.println("cambio de q3 a q4");
+   		 	  	}
+   		 	  	contador++;
+   		 	  	continue;
+   		 	  }
+                         
+                         if(actual=="q4"){
+                              
+   		 	  	if(input[contador]==0 ){
+   		 	  		actual="q5";
+                                        System.out.println("cambio de q4 a q5");
+   		 	  	}
+   		 	  	contador++;
+   		 	  	continue;
+   		 	  }
+                         
+                         if(actual=="q5"){
                              
                              if(input[contador]==0){
-   		 	  		actual="q3";
-                                        System.out.println("cambio de q3 a q3");
+   		 	  		actual="q5";
+                                        System.out.println("cambio de q5 a q5");
    		 	  	}else{
                                             System.out.println("cadena no valida");
                                             break;
@@ -61,8 +80,6 @@ public static void main(String[] args) {
                              contador++;
    		 	  	continue;
                          
-                         
-                          //esto lo puse para saber si los valores al final eran igual o no y si daba error XD puedes quitarlo si quieres
                           
    		 	  }
    
